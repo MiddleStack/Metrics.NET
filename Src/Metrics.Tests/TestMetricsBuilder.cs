@@ -1,7 +1,6 @@
 ﻿using System;
 using Metrics.Core;
 using Metrics.MetricData;
-using Metrics.PerfCounters;
 using Metrics.Sampling;
 using Metrics.Utils;
 
@@ -16,11 +15,6 @@ namespace Metrics.Tests
         {
             this.clock = clock;
             this.scheduler = scheduler;
-        }
-
-        public MetricValueProvider<double> BuildPerformanceCounter(string name, Unit unit, string counterCategory, string counterName, string counterInstance)
-        {
-            return new PerformanceCounterGauge(counterCategory, counterName, counterInstance);
         }
 
         public MetricValueProvider<double> BuildGauge(string name, Unit unit, Func<double> valueProvider)

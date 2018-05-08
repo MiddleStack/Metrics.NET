@@ -53,21 +53,21 @@ namespace Metrics.Tests.Core
             counterValue.Value.Count.Should().Be(1);
         }
 
-        [Fact]
-        public void MetricsContext_RaisesShutdownEventOnMetricsDisable()
-        {
-            context.MonitorEvents();
-            context.Advanced.CompletelyDisableMetrics();
-            context.ShouldRaise("ContextShuttingDown");
-        }
+        //[Fact]
+        //public void MetricsContext_RaisesShutdownEventOnMetricsDisable()
+        //{
+        //    context.MonitorEvents();
+        //    context.Advanced.CompletelyDisableMetrics();
+        //    context.ShouldRaise("ContextShuttingDown");
+        //}
 
-        [Fact]
-        public void MetricsContext_RaisesShutdownEventOnDispose()
-        {
-            context.MonitorEvents();
-            context.Dispose();
-            context.ShouldRaise("ContextShuttingDown");
-        }
+        //[Fact]
+        //public void MetricsContext_RaisesShutdownEventOnDispose()
+        //{
+        //    context.MonitorEvents();
+        //    context.Dispose();
+        //    context.ShouldRaise("ContextShuttingDown");
+        //}
 
         [Fact]
         public void MetricsContext_DataProviderReflectsNewMetrics()

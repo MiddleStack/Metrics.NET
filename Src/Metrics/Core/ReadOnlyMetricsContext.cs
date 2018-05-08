@@ -15,7 +15,6 @@ namespace Metrics.Core
         public MetricsContext Context(string contextName, Func<string, MetricsContext> contextCreator) { throw new ReadOnlyMetricsContextException(); }
         public void ShutdownContext(string contextName) { throw new ReadOnlyMetricsContextException(); }
         public void Gauge(string name, Func<double> valueProvider, Unit unit, MetricTags tags) { throw new ReadOnlyMetricsContextException(); }
-        public void PerformanceCounter(string name, string counterCategory, string counterName, string counterInstance, Unit unit, MetricTags tags) { throw new ReadOnlyMetricsContextException(); }
         public Counter Counter(string name, Unit unit, MetricTags tags) { throw new ReadOnlyMetricsContextException(); }
         public Meter Meter(string name, Unit unit, TimeUnit rateUnit, MetricTags tags) { throw new ReadOnlyMetricsContextException(); }
         public Histogram Histogram(string name, Unit unit, SamplingType samplingType, MetricTags tags) { throw new ReadOnlyMetricsContextException(); }
